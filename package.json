@@ -1,0 +1,27 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "personal-blog",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sins621/blog.git"
+  },
+  "author": "sins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sins621/blog/issues"
+  },
+  "homepage": "https://github.com/sins621/blog#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0",
+    "request": "^2.88.2",
+    "serve-favicon": "^2.5.0"
+  }
+}
