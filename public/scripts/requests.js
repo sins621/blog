@@ -1,3 +1,5 @@
+// TODO: Convert flat list of dirs into nested <li>s
+
 let user = "sins621";
 let repo = "Obsidian-Notes";
 
@@ -39,8 +41,6 @@ function onSuccessfulTreeCall(response) {
     update_content(user, repo, event.target.innerText, event.target.id);
   });
 }
-
-tree = undefined
 
 if (!tree)
   $.ajax({

@@ -1,14 +1,54 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 50px;
-  gap: 20px;
+/* TODO: BTOP Style color gradient for the list*/
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 
-.sidebar {
-  border-right: solid 1px #3c3836;
-  position: sticky;
-  height: 100vh;
-  overflow-y: scroll;
-  width: 250px;
-  overflow-x: hidden;
+.sidebar a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
 }
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar a {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+/*.sidebar a.active {*/
+/*  background-color: #04AA6D;*/
+/*  color: white;*/
+/*}*/
+/**/
+/*.sidebar a:hover:not(.active) {*/
+/*  background-color: #555;*/
+/*  color: white;*/
+/*}*/
