@@ -1,9 +1,9 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr minmax(1px, 2fr) 1fr;
 }
 
-.content {
-  display: flexbox;
-  word-wrap: break-word;
+.content > * {
+  text-wrap: pretty;
+  /* word-wrap: break-word; */
 }
