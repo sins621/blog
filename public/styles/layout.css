@@ -1,9 +1,14 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr minmax(1px, 2fr) 1fr;
+  grid-template-columns: 1fr 2fr 50px;
+  gap: 20px;
 }
 
-.content > * {
-  text-wrap: pretty;
-  /* word-wrap: break-word; */
+.sidebar {
+  border-right: solid 1px #3c3836;
+  position: sticky;
+  height: 100vh;
+  overflow-y: scroll;
+  width: 250px;
+  overflow-x: hidden;
 }
