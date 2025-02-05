@@ -1,3 +1,5 @@
+// TODO: Convert flat list of dirs into nested <li>s
+
 let user = "sins621";
 let repo = "Obsidian-Notes";
 

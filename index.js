@@ -14,8 +14,7 @@ app.use(favicon(path.join(__dirname, "public", "img", "favicon.ico")));
 app.use(express.static("public"));
 
 app.get("/", (_req, res) => {
-  res.render("index.ejs", {
-  });
+  res.render("index.ejs", {});
 });
 
 app.listen(port, () => {
