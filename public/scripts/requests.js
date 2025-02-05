@@ -2,8 +2,6 @@ let user = "sins621";
 let repo = "Obsidian-Notes";
 
 function update_content(user, repo, path, url) {
-  console.log(path);
-  console.log(url);
   $.ajax({
     url: "http://localhost:3000/get_file",
     type: "get", //send it through get method
@@ -27,8 +25,6 @@ function update_content(user, repo, path, url) {
 let tree = localStorage.getItem("myTree");
 
 function onSuccessfulTreeCall(response) {
-  localStorage.setItem("myTree", response);
-  console.log(response);
   let sidebar_list = $(".list");
   response.forEach((element) => {
     sidebar_list.append(`<li id="${element.url}">${element.path}</li>`);
@@ -40,8 +36,6 @@ function onSuccessfulTreeCall(response) {
   });
 }
 
-tree = undefined
-
 if (!tree)
   $.ajax({
     url: "http://localhost:3000/get_tree",
@@ -51,10 +45,11 @@ if (!tree)
       github_repo: repo,
     },
     success: function (response) {
+      localStorage.setItem("myTree", JSON.stringify(response));
       onSuccessfulTreeCall(response);
     },
     error: function (xhr) {
       //Do Something to handle error
     },
   });
-else onSuccessfulTreeCall(tree);
+else onSuccessfulTreeCall(JSON.parse(tree));

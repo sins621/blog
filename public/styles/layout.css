@@ -1,12 +1,17 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 50px;
+  grid-template-columns: 2fr auto;
   gap: 20px;
+  padding-left: 270px;
 }
+
+/* .content {
+  width: 50%;
+} */
 
 .sidebar {
   border-right: solid 1px #3c3836;
-  position: sticky;
+  position: fixed;
   height: 100vh;
   overflow-y: scroll;
   width: 250px;
